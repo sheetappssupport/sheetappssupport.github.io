@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1M Sheet | ชีทล้านแผ่น</title>
+<meta name="description" content="แอปและเครื่องมือ Google Sheet ใช้ง่ายบนมือถือ สำหรับครู ร้านค้า และงานประจำวัน ข้อมูลอยู่ในชีตของคุณเอง">
+<meta property="og:title" content="1M Sheet | ชีทล้านแผ่น">
+<meta property="og:description" content="แอปและเครื่องมือ Google Sheet ใช้ง่ายบนมือถือ ข้อมูลอยู่ในชีตของคุณเอง">
+<meta property="og:image" content="https://sheetappssupport.github.io/assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600&family=Kanit:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0E9F7A;--green-d:#0A6E57;--blue:#2F6BE0;--ink:#13221E;--muted:#5B6B66;--bg:#F5FAF8;--card:#fff;--line:#E2ECE8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IBM Plex Sans Thai',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:18px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:Kanit;font-weight:700;font-size:20px}
+.brand img{width:40px;height:40px;border-radius:10px}
+header nav a{margin-left:20px;color:var(--muted);font-weight:600;font-size:15px}
+header nav a:hover{color:var(--green)}
+.hero{background:linear-gradient(120deg,var(--green-d),var(--green) 55%,#1F5FD6 130%);color:#fff;border-radius:28px;margin:8px 20px 0;padding:72px 0 80px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:48px 48px}
+.hero .wrap{position:relative}
+.hero h1{font-family:Kanit;font-weight:800;font-size:clamp(40px,7vw,72px);line-height:1.05}
+.hero h1 small{display:block;font-weight:600;font-size:.55em;color:#C9F7E8;margin-top:8px}
+.hero p{font-size:clamp(17px,2.2vw,21px);max-width:620px;margin-top:22px;color:#EAFBF5}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 24px;border-radius:14px;font-weight:600;font-size:16px}
+.btn.w{background:#fff;color:var(--green-d)}
+.btn.o{border:2px solid rgba(255,255,255,.7);color:#fff}
+section{padding:64px 0 0}
+h2{font-family:Kanit;font-weight:700;font-size:30px}
+.sub{color:var(--muted);margin-top:4px}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;margin-top:26px}
+.app{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform .15s,box-shadow .15s}
+a.app:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(14,80,60,.12)}
+.app .top{display:flex;align-items:center;gap:14px}
+.app img{width:64px;height:64px;border-radius:16px}
+.app h3{font-family:Kanit;font-weight:700;font-size:22px;line-height:1.2}
+.app .tag{font-size:13px;font-weight:600;padding:2px 10px;border-radius:99px;display:inline-block;margin-top:4px}
+.tag.g{background:#E1F6EF;color:var(--green-d)}
+.tag.b{background:#E4ECFC;color:#1F4FB0}
+.tag.s{background:#EEF1F0;color:var(--muted)}
+.app p{color:var(--muted);font-size:15px}
+.app .more{margin-top:auto;font-weight:600;color:var(--green)}
+.app.soon{border-style:dashed;background:transparent;justify-content:center;align-items:flex-start}
+.soon .plus{width:64px;height:64px;border-radius:16px;border:2px dashed #B9CCC5;display:grid;place-items:center;font-size:30px;color:#9AB1A9}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:26px}
+.why div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.why b{display:block;font-family:Kanit;font-weight:600;font-size:19px;margin:8px 0 4px}
+.why span{font-size:28px}
+.why p{color:var(--muted);font-size:15px}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;margin-top:26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.contact .btn{background:var(--green);color:#fff}
+footer{padding:48px 0 36px;color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:600px){header nav{display:none}.hero{margin:4px 12px 0;padding:48px 0 54px;border-radius:22px}section{padding-top:48px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="./"><img src="assets/logo.png" alt="">1M Sheet</a>
+  <nav><a href="#apps">แอปทั้งหมด</a><a href="#why">ทำไมต้อง 1M Sheet</a><a href="#contact">ติดต่อ</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>1M Sheet<small>ชีทล้านแผ่น</small></h1>
+  <p>แอปและเครื่องมือ Google Sheet ใช้ง่ายบนมือถือ สำหรับครู ร้านค้า และงานประจำวัน — ข้อมูลทั้งหมดอยู่ในชีตของคุณเอง</p>
+  <div class="btns">
+    <a class="btn w" href="#apps">ดูแอปทั้งหมด</a>
+    <a class="btn o" href="https://www.facebook.com/1msheet" target="_blank" rel="noopener">ติดตามเพจ Facebook</a>
+  </div>
+</div></div>
+
+<main class="wrap">
+  <section id="apps">
+    <h2>แอปของเรา</h2>
+    <p class="sub">แต่ละแอปเก็บข้อมูลลง Google Sheet ในบัญชีของคุณ เปิดดูหรือแก้ในชีตได้ตลอด</p>
+    <div class="apps">
+      <a class="app" href="krusheet/">
+        <div class="top"><img src="assets/krusheet.png" alt="ครูชีต"><div><h3>ครูชีต</h3><span class="tag g">Android · ช่วงทดสอบ</span></div></div>
+        <p>เช็คชื่อและเก็บคะแนนนักเรียนบนมือถือ เช็คชื่อห้องละไม่ถึง 1 นาที สรุปผลลงชีตให้อัตโนมัติ</p>
+        <span class="more">ดูรายละเอียด →</span>
+      </a>
+      <a class="app" href="stocksheet/">
+        <div class="top"><img src="assets/stocksheet.png" alt="สต็อกชีต"><div><h3>สต็อกชีต</h3><span class="tag b">Android</span></div></div>
+        <p>จัดการสต็อกสินค้าของร้าน รับเข้า ตัดออก ตรวจนับ แชร์ให้ทีมใช้ร่วมกันได้</p>
+        <span class="more">ดูรายละเอียด →</span>
+      </a>
+      <div class="app soon">
+        <div class="plus">+</div>
+        <h3>งานใหม่กำลังมา</h3>
+        <p>มีแอปและเทมเพลตชีตอีกหลายตัวที่กำลังทำ ติดตามเพจเพื่อรู้ก่อนใคร</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>ทำไมต้อง 1M Sheet</h2>
+    <div class="why">
+      <div><span>🔒</span><b>ข้อมูลเป็นของคุณ</b><p>ทุกอย่างอยู่ใน Google Sheet ของคุณเอง เราไม่เก็บข้อมูลไว้ที่เซิร์ฟเวอร์ของเรา</p></div>
+      <div><span>📱</span><b>ใช้ง่ายบนมือถือ</b><p>ออกแบบให้กดไม่กี่ครั้งก็เสร็จ ไม่ต้องนั่งพิมพ์ลงตารางเอง</p></div>
+      <div><span>📊</span><b>ต่อยอดในชีตได้</b><p>อยากทำกราฟ พิมพ์รายงาน หรือแชร์ต่อ เปิดชีตแล้วทำได้ทันที</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>ติดต่อเรา</h2>
+    <div class="contact">
+      <div><b>มีคำถาม หรืออยากได้แอปช่วยงานแบบไหน บอกเราได้</b><p class="sub">sheetapps.support@gmail.com</p></div>
+      <a class="btn" href="mailto:sheetapps.support@gmail.com">ส่งอีเมล</a>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 1M Sheet | ชีทล้านแผ่น · ไม่มีส่วนเกี่ยวข้องกับ Google LLC · Google Sheets เป็นเครื่องหมายการค้าของ Google LLC</footer>
+</body>
+</html>
